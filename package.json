@@ -1,0 +1,27 @@
+{
+  "name": "ticketera",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web con el fin de comprar de boletos electronicos",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "EJS",
+    "EXPRESS",
+    "SQLITE"
+  ],
+  "author": "Luke53k",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
