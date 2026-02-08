@@ -22,15 +22,15 @@
 }
 
 .navbar a:hover {
-  background: #fff;
-  color: #1d3b57;
+  background: #29537a;
+  color: #ffffff;
   border-radius: 4px;
 }
 
 /* BOTONES */
 .btn {
   display: inline-block;
-  background: #0077cc;
+  background: #7e0c87;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -40,7 +40,7 @@
 }
 
 .btn:hover {
-  background: #005fa3;
+  background: #48072e;
 }
 
 /* FOOTER */

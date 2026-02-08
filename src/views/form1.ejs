@@ -1,0 +1,71 @@
+<%- include("layout/head", { title: "Comprar Entrada", css: "form.css" }) %>
+
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<main class="container form-container page">
+
+  <h1>Comprar Entradas</h1>
+
+  <!-- Formulario -->
+  <form id="ticketForm" class="ticket-form">
+
+    <!-- Cantidad de entradas -->
+    <div class="form-group">
+      <label for="cantidad">Cantidad de Entradas:</label>
+      <select id="cantidad" name="cantidad">
+        <% for(let i=1; i<=6; i++){ %>
+          <option value="<%= i %>"><%= i %></option>
+        <% } %>
+      </select>
+    </div>
+
+    <!-- Datos personales -->
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 1123456789">
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="mail" placeholder="ejemplo@mail.com">
+    </div>
+
+    <div class="form-group">
+      <label for="confirmacion">Confirmar Email:</label>
+      <input type="email" id="confirmacion" name="confirmacion" placeholder="Reingrese su email">
+    </div>
+
+    <!-- Resumen -->
+    <section class="resumen">
+      <h2>Resumen de Compra</h2>
+      <p>Valor entradas: <span id="valorEntradas">0</span></p>
+      <p>Gastos de gestión: $250</p>
+      <p>Total: <span id="total">0</span></p>
+    </section>
+
+    <!-- Botón de confirmación -->
+    <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+
+    <!-- Términos y condiciones -->
+    <section class="terminos">
+      <h3>Términos y Condiciones Generales</h3>
+      <p>Aquí podrás colocar los términos y condiciones de la compra de entradas.</p>
+    </section>
+
+  </form>
+
+</main>
+
+<%- include("partials/footer") %>
+<%- include("partials/scripts") %>

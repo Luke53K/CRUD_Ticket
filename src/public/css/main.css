@@ -1,3 +1,18 @@
+/* ANIM-TRANSICION */
+.page {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.page.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.page.enter-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 /* RESET / BASE */
 * {
   box-sizing: border-box;
@@ -53,3 +68,4 @@ h1, h2, h3 {
   max-width: 100%;
   margin: 0 auto;
 }
+

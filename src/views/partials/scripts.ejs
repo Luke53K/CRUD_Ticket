@@ -1,0 +1,39 @@
+<script>
+  const cantidadSelect = document.getElementById("cantidad");
+  const valorEntradas = document.getElementById("valorEntradas");
+  const totalSpan = document.getElementById("total");
+
+  const PRECIO_ENTRADA = 1000;
+  const GASTOS_GESTION = 250;
+
+  function actualizarResumen() {
+    const cantidad = parseInt(cantidadSelect.value, 10);
+    const subtotal = cantidad * PRECIO_ENTRADA;
+    const total = subtotal + GASTOS_GESTION;
+
+    valorEntradas.textContent = `$${subtotal}`;
+    totalSpan.textContent = `$${total}`;
+  }
+
+  // Inicial
+  actualizarResumen();
+
+  // Evento
+  cantidadSelect.addEventListener("change", actualizarResumen);
+</script>
+
+<script>
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      const page = document.querySelector(".page");
+      if (!page) return;
+
+      e.preventDefault();
+      page.classList.add("exit-left");
+
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 400);
+    });
+  });
+</script>
